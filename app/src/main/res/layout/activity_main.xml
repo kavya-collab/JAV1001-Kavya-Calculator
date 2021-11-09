@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="5"
+        android:background="@color/grey"
+        android:gravity="right|center"
+        android:textSize="40pt"
+        android:inputType="none"
+        android:text="@string/_0"
+        tools:ignore="Autofill,InefficientWeight,LabelFor,RtlHardcoded"/>
+        <!--This section is edit text which results gets displayed  and
+        as default 0 is displayed -->
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TableRow
+            android:layout_marginTop="10pt"
+            android:layout_marginStart="10pt"
+            android:layout_marginBottom="10pt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white">
+         <!-- This is the first row of which contains clear ,power modulo and addition operators
+               -->
+            <Button
+                android:id="@+id/bAC"
+                android:text="AC"
+                android:onClick="acEvent"
+                android:textColor="@color/white"
+                android:layout_marginEnd="10pt"
+                android:layout_marginLeft="10pt"
+                android:layout_height="30pt"
+                android:layout_width="30pt"
+                android:layout_weight="1"
+                android:background="@color/white"
+                tools:ignore="ButtonStyle,HardcodedText,RtlHardcoded" />
+            <!-- It performs an action of clearing the text in the editText area-->
+            <Button
+                android:id="@+id/bPower"
+                android:text="^"
+                android:onClick="exponentOperatorEvent"
+                android:layout_marginRight="10pt"
+                android:layout_height="30pt"
+                android:layout_width="30pt"
+                android:layout_weight="1"
+                android:background="@color/blueback"
+                tools:ignore="ButtonStyle,HardcodedText,RtlHardcoded" />
+            <!-- Calculates the power of two numbers-->
+            <Button
+                android:id="@+id/bPercent"
+                android:text="%"
+                android:onClick="moduloOperatorEvent"
+                android:layout_marginEnd="10pt"
+                android:layout_height="30pt"
+                android:layout_width="30pt"
+                android:layout_weight="1"
+                android:background="@color/blueback"
+                tools:ignore="ButtonStyle,HardcodedText,RtlHardcoded" />
+            <!-- Calculates the remainder after the division which is called modulo operator-->
+            <Button
+                android:id="@+id/bMultiply"
+                android:text="*"
+                android:onClick="multiplyOperatorEvent"
+                android:layout_marginRight="10pt"
+                android:layout_height="30pt"
+                android:layout_width="30pt"
+                android:layout_weight="1"
+                android:background="@color/blueback"
+                tools:ignore="ButtonStyle,HardcodedText,RtlHardcoded" />
+            <!-- performs the multiplication operation between two numbers-->
+        </TableRow>
+        <TableRow
+            android:layout_marginStart="10pt"
+            android:layout_marginBottom="1pt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white">
+
+
+            <Button
+                android:id="@+id/b7"
+                android:text="@string/_7"
+                android:onClick="buttonSevenEvent"
+                android:layout_marginRight="10pt"
+                android:layout_height="30pt"
+                android:layout_width="30pt"
+                android:layout_weight="1"
+                android:background="@color/blueback"
+                tools:ignore="ButtonStyle,RtlHardcoded" />
+            <!-- it is the digit "7" and on it displays on editText area-->
+            <Button
+                android:id="@+id/b8"
+                android:text="@string/_8"
+                android:onClick="buttonEightEvent"
+                android:layout_marginRight="10pt"
+                android:layout_height="30pt"
+                android:layout_width="30pt"
+                android:layout_weight="1"
+                android:background="@color/blueback"
+                tools:ignore="ButtonStyle,RtlHardcoded" />
+            <!-- it is the digit "8" and on it displays on editText area-->
+            <Button
+                android:id="@+id/b9"
+                android:text="@string/_9"
+                android:onClick="buttonNineEvent"
+                android:layout_marginRight="10pt"
+                android:layout_height="30pt"
+                android:layout_width="30pt"
+                android:layout_weight="1"
+                android:background="@color/blueback"
+                tools:ignore="ButtonStyle,RtlHardcoded" />
+            <!-- it is the digit "9" and on it displays on editText area-->
+            <Button
+                android:id="@+id/bDivide"
+                android:text="/"
+                android:onClick="divisionOperatorEvent"
+                android:layout_marginEnd="10pt"
+                android:layout_height="30pt"
+                android:layout_width="30pt"
+                android:layout_weight="1"
+                android:background="@color/blueback"
+                tools:ignore="ButtonStyle,HardcodedText" />
+            <!-- It performs the division operation between two numbers-->
+        </TableRow>
+        <TableRow
+            android:layout_marginStart="10pt"
+            android:layout_marginTop="10pt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white">
+
+
+            <Button
+                android:id="@+id/b4"
+                android:text="4"
+                android:onClick="buttonFourEvent"
+                android:layout_marginRight="10pt"
+                android:layout_height="30pt"
+                android:layout_width="30pt"
+                android:layout_weight="1"
+                android:background="@color/blueback"
+                tools:ignore="ButtonStyle,HardcodedText,RtlHardcoded" />
+            <!-- it is the digit "4" and on it displays on editText area-->
+            <Button
+                android:id="@+id/b5"
+                android:text="5"
+                android:onClick="buttonFiveEvent"
+                android:layout_marginRight="10pt"
+                android:layout_height="30pt"
+                android:layout_width="30pt"
+                android:layout_weight="1"
+                android:background="@color/blueback"
+                tools:ignore="ButtonStyle,HardcodedText,RtlHardcoded" />
+            <!-- it is the digit "5" and on it displays on editText area-->
+            <Button
+                android:id="@+id/b6"
+                android:text="@string/_6"
+                android:onClick="buttonSixEvent"
+                android:layout_marginRight="10pt"
+                android:layout_height="30pt"
+                android:layout_width="30pt"
+                android:layout_weight="1"
+                android:background="@color/blueback"
+                tools:ignore="ButtonStyle,RtlHardcoded" />
+            <!-- it is the digit "6" and on it displays on editText area-->
+            <Button
+                android:id="@+id/bPlus"
+                android:text="+"
+                android:onClick="additionOperatorEvent"
+                android:layout_marginRight="10pt"
+                android:layout_height="30pt"
+                android:layout_width="30pt"
+                android:layout_weight="1"
+                android:background="@color/blueback"
+                tools:ignore="ButtonStyle,HardcodedText,RtlHardcoded" />
+            <!-- It performs the addition operation between two numbers-->
+        </TableRow>
+        <TableRow
+            android:layout_marginStart="10pt"
+            android:layout_marginTop="10pt"
+            android:layout_marginBottom="10pt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:ignore="ExtraText"
+            android:background="@color/white">
+
+            <Button
+                android:id="@+id/b1"
+                android:text="1"
+                android:onClick="buttonOneEvent"
+                android:layout_marginRight="10pt"
+                android:layout_height="30pt"
+                android:layout_width="30pt"
+                android:layout_weight="1"
+                android:background="@color/blueback"
+                tools:ignore="ButtonStyle,HardcodedText,RtlHardcoded" />
+            <!-- it is the digit "1" and on it displays on editText area-->
+            <Button
+                android:id="@+id/b2"
+                android:text="@string/_2"
+                android:onClick="buttonTwoEvent"
+                android:layout_marginRight="10pt"
+                android:layout_height="30pt"
+                android:layout_width="30pt"
+                android:layout_weight="1"
+                android:background="@color/blueback"
+                tools:ignore="ButtonStyle,RtlHardcoded" />
+            <!-- it is the digit "2" and on it displays on editText area-->
+            <Button
+                android:id="@+id/b3"
+                android:text="@string/_3"
+                android:onClick="buttonThreeEvent"
+                android:layout_marginRight="10pt"
+                android:layout_height="30pt"
+                android:layout_width="30pt"
+                android:layout_weight="1"
+                android:background="@color/blueback"
+                tools:ignore="ButtonStyle,RtlHardcoded" />
+            <!-- it is the digit "3" and on it displays on editText area-->
+            <Button
+                android:id="@+id/bMinus"
+                android:text="-"
+                android:onClick="differenceOperatorEvent"
+                android:layout_marginRight="10pt"
+                android:layout_height="30pt"
+                android:layout_width="30pt"
+                android:layout_weight="1"
+                android:background="@color/blueback"
+                tools:ignore="ButtonStyle,HardcodedText,RtlHardcoded" />
+            <!-- It performs the subtraction operation between two numbers-->
+        </TableRow>
+        <TableRow
+            android:layout_marginBottom="10pt"
+            android:layout_marginStart="10pt"
+            android:layout_marginTop="1pt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white">
+
+            <Button
+                android:id="@+id/bPlusMinus"
+                android:text="+/-"
+                android:onClick="buttonPlusMinusEvent"
+                android:layout_marginRight="10pt"
+                android:layout_height="30pt"
+                android:layout_width="30pt"
+                android:layout_weight="1"
+                android:background="@color/blueback"
+                tools:ignore="ButtonStyle,HardcodedText,RtlHardcoded" />
+            <!-- It just negotiotes the number present in editText area-->
+            <Button
+                android:id="@+id/b0"
+                android:text="0"
+                android:onClick="buttonZeroEvent"
+                android:layout_marginRight="10pt"
+                android:layout_height="30pt"
+                android:layout_width="30pt"
+                android:layout_weight="1"
+                android:background="@color/blueback"
+                tools:ignore="ButtonStyle,HardcodedText,RtlHardcoded" />
+            <!-- it is the digit "0" and on it displays on editText area-->
+            <Button
+                android:id="@+id/bDot"
+                android:text="."
+                android:onClick="buttonDotEvent"
+                android:layout_marginRight="10pt"
+                android:layout_height="30pt"
+                android:layout_width="30pt"
+                android:layout_weight="1"
+                android:background="@color/blueback"
+                tools:ignore="ButtonStyle,HardcodedText,RtlHardcoded" />
+            <!-- it is the  decimal point "."and on it displays on editText area-->
+            <Button
+                android:id="@+id/bEqual"
+                android:text="="
+                android:onClick="equalEvent"
+                android:layout_marginRight="10pt"
+                android:layout_height="30pt"
+                android:layout_width="30pt"
+                android:layout_weight="1"
+                android:background="@color/blueback"
+                tools:ignore="ButtonStyle,HardcodedText,RtlHardcoded" />
+            <!-- This is the final result button -->
+
+        </TableRow>
+    </TableLayout>
+
+</LinearLayout>
