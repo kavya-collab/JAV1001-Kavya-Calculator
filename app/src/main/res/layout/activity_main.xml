@@ -43,7 +43,6 @@
                 android:layout_height="30pt"
                 android:layout_width="30pt"
                 android:layout_weight="1"
-                android:background="@color/white"
                 tools:ignore="ButtonStyle,HardcodedText,RtlHardcoded" />
             <!-- It performs an action of clearing the text in the editText area-->
             <Button
